@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume — Nexora</title><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/stats-resume.css"></head>
+<body class="dashboard-page">
+<aside class="sidebar"><a class="brand" href="/">NEXORA<span>.</span></a><div class="sidebar-label">WORKSPACE</div>
+<a class="side-link" href="/user-dashboard">▦ &nbsp; Overview</a><a class="side-link" href="/about.html">ⓘ &nbsp; About Nexora</a><a class="side-link jobs-link" href="/jobs">▣ &nbsp; Jobs Portal</a><a class="side-link" href="/statistics">▤ &nbsp; Statistics</a><a class="side-link selected" href="/resume">▧ &nbsp; Resume</a>
+<div class="sidebar-bottom"><div class="sidebar-help">Need a hand?<small>Visit the About page to learn more.</small></div><form action="/logout" method="POST"><button class="side-logout" type="submit">↪ &nbsp; Sign out</button></form></div></aside>
+<main class="dash-main"><header class="dash-top"><div><span class="eyebrow">YOUR WORKSPACE</span><h1>Resume</h1></div><a class="profile-chip profile-link" href="/profile"><span class="avatar" id="avatar">U</span><div><b id="top-name">Your account</b><small>USER ACCOUNT</small></div><span class="profile-chevron">↗</span></a><button class="theme-toggle dash-theme" type="button" aria-label="Toggle dark mode">☾</button></header>
+<section class="content-card resume-card"><div class="card-heading"><div><span class="eyebrow">CAREER PROFILE</span><h2>Your resume</h2></div><span class="status-pill"><i></i> Private upload</span></div>
+<p class="muted">Upload a PDF or DOCX resume. Your file is associated with your account and can be replaced whenever you need.</p>
+<form id="resume-form" class="resume-upload" enctype="multipart/form-data"><label for="resume-file" class="resume-drop"><span class="resume-symbol">↑</span><strong>Choose a resume file</strong><small>PDF or DOCX · maximum 5 MB</small><input id="resume-file" name="resume" type="file" accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required></label>
+<button class="resume-submit" type="submit">Upload resume</button></form>
+<div id="resume-message" class="resume-message" role="status"></div>
+<div id="resume-current" class="resume-current" hidden><div><span class="eyebrow">CURRENT FILE</span><strong id="resume-name">—</strong><small id="resume-date">—</small></div><div class="resume-actions"><a id="resume-download" class="text-link" href="#">Download</a><button id="resume-delete" class="resume-delete" type="button">Delete</button></div></div>
+</section><footer class="dash-footer">© <span data-year></span> Nexora <span>Made for a simpler experience.</span></footer></main>
+<script src="/js/dashboard.js"></script><script src="/js/site.js"></script><script src="/js/resume.js"></script></body></html>

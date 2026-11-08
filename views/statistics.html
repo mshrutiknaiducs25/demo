@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statistics — Nexora</title><link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/stats-resume.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-page">
+<aside class="sidebar">
+<a class="brand" href="/">NEXORA<span>.</span></a><div class="sidebar-label">WORKSPACE</div>
+<a class="side-link" href="/user-dashboard">▦ &nbsp; Overview</a>
+<a class="side-link" href="/about.html">ⓘ &nbsp; About Nexora</a>
+<a class="side-link jobs-link" href="/jobs">▣ &nbsp; Jobs Portal</a>
+<a class="side-link selected" href="/statistics">▤ &nbsp; Statistics</a>
+<a class="side-link" href="/resume">▧ &nbsp; Resume</a>
+<div class="sidebar-bottom"><div class="sidebar-help">Need a hand?<small>Visit the About page to learn more.</small></div>
+<form action="/logout" method="POST"><button class="side-logout" type="submit">↪ &nbsp; Sign out</button></form></div>
+</aside>
+<main class="dash-main">
+<header class="dash-top"><div><span class="eyebrow">YOUR WORKSPACE</span><h1>Statistics</h1></div><a class="profile-chip profile-link" href="/profile"><span class="avatar" id="avatar">U</span><div><b id="top-name">Your account</b><small>USER ACCOUNT</small></div><span class="profile-chevron">↗</span></a><button class="theme-toggle dash-theme" type="button" aria-label="Toggle dark mode">☾</button></header>
+<section class="stats-kpis">
+<article class="dash-card"><span class="card-label">APPLICATIONS SUBMITTED</span><strong id="total-apps">—</strong><small>All-time applications</small></article>
+<article class="dash-card"><span class="card-label">JOBS AVAILABLE</span><strong id="jobs-total">—</strong><small>Current job listings</small></article>
+<article class="dash-card"><span class="card-label">APPLICATION ACTIVITY</span><strong id="active-month">—</strong><small>Applications this month</small></article>
+</section>
+<section class="stats-chart-grid">
+<article class="content-card"><div class="card-heading"><div><span class="eyebrow">TREND</span><h2>Applications by month</h2></div></div><div class="chart-wrap"><canvas id="monthlyChart" aria-label="Applications by month"></canvas></div></article>
+<article class="content-card"><div class="card-heading"><div><span class="eyebrow">OVERVIEW</span><h2>Application activity</h2></div></div><div class="chart-wrap chart-small"><canvas id="summaryChart" aria-label="Application activity overview"></canvas></div><p class="muted" id="chart-note">This chart reflects submitted applications. Status breakdown is not available in the current database schema.</p></article>
+</section>
+<p class="stats-error" id="stats-error" role="status"></p>
+<footer class="dash-footer">© <span data-year></span> Nexora <span>Made for a simpler experience.</span></footer>
+</main>
+<script src="/js/dashboard.js"></script><script src="/js/site.js"></script><script src="/js/statistics.js"></script>
+</body></html>

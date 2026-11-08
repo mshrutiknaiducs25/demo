@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Portal — Nexora</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/jobs.css">
+</head>
+<body class="dashboard-page jobs-page">
+  <aside class="sidebar">
+    <a class="brand" href="/">NEXORA<span>.</span></a>
+    <div class="sidebar-label" id="jobs-sidebar-label">WORKSPACE</div>
+    <a class="side-link" id="jobs-overview-link" href="/user-dashboard">▦ &nbsp; Overview</a>
+    <a class="side-link selected" href="/jobs">✦ &nbsp; Career Portal</a>
+    <a class="side-link" href="/profile">♙ &nbsp; My Profile</a>
+    <a href="/jobs" class="side-link jobs-link selected">
+    <i class="fas fa-briefcase"></i>
+    Jobs Portal
+</a>
+    <div class="sidebar-bottom">
+      <div class="sidebar-help">Nexora Career Portal<small>Explore opportunities and apply.</small></div>
+      <form action="/logout" method="POST"><button class="side-logout" type="submit">↪ &nbsp; Sign out</button></form>
+    </div>
+  </aside>
+
+  <main class="dash-main jobs-main">
+    <header class="dash-top jobs-top">
+      <div><span class="eyebrow">CAREER OPPORTUNITIES</span><h1>Jobs Portal</h1></div>
+      <a class="profile-chip profile-link" href="/profile"><span class="avatar" id="jobs-avatar">N</span><div><b id="jobs-user-name">Your account</b><small id="jobs-user-role">ACCOUNT</small></div><span class="profile-chevron">↗</span></a>
+      <button class="theme-toggle dash-theme" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+    </header>
+
+    <section class="jobs-hero">
+      <div><span class="eyebrow light">YOUR NEXT MOVE STARTS HERE</span><h2>Find your <em>future.</em></h2><p>Discover opportunities that match your academic profile and career goals.</p></div>
+      <div class="jobs-hero-mark">N<span>.</span></div>
+    </section>
+
+    <section class="jobs-admin-panel" id="admin-panel" hidden>
+      <div class="jobs-section-heading"><div><span class="eyebrow">ADMIN CONTROL</span><h2>Publish a job</h2></div><span class="jobs-admin-tag">ADMIN</span></div>
+      <form id="job-create-form" class="jobs-create-form">
+        <label>Job name<input name="job_name" maxlength="150" placeholder="e.g. Software Engineer" required></label>
+        <label>Minimum CGPA<input name="min_cgpa" type="number" min="0" max="10" step="0.01" placeholder="e.g. 7.00" required></label>
+        <label>Offering CTC (LPA)<input name="offering_ctc" type="number" min="0.01" step="0.01" placeholder="e.g. 8.50" required></label>
+        <label>Location<input name="location" maxlength="180" placeholder="e.g. Bengaluru / Remote" required></label>
+        <button class="jobs-primary-btn" type="submit"><span>＋</span> Add Job Listing</button>
+      </form>
+      <p class="jobs-feedback" id="admin-feedback" role="status"></p>
+    </section>
+
+    <section class="jobs-list-section">
+      <div class="jobs-section-heading"><div><span class="eyebrow">OPEN POSITIONS</span><h2>Latest listings</h2></div><span class="jobs-count" id="jobs-count">Loading…</span></div>
+      <div class="jobs-grid" id="jobs-grid"><div class="jobs-empty">Loading opportunities…</div></div>
+    </section>
+
+    <section class="jobs-applicants-panel" id="applicants-panel" hidden>
+      <div class="jobs-section-heading"><div><span class="eyebrow">APPLICATION REVIEW</span><h2 id="applicants-title">Applicants</h2></div><button class="jobs-secondary-btn" id="close-applicants" type="button">Close</button></div>
+      <div class="jobs-applicants-list" id="applicants-list"></div>
+    </section>
+    <footer class="dash-footer">© <span data-year></span> Nexora <span>Build your next chapter.</span></footer>
+  </main>
+
+  <script src="/js/jobs.js"></script>
+  <script src="/js/site.js"></script>
+</body>
+</html>

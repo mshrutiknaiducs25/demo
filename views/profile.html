@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile — Nexora</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dashboard-page profile-page">
+
+  <aside class="sidebar">
+    <a class="brand" href="/">NEXORA<span>.</span></a>
+
+    <div class="sidebar-label">ACCOUNT</div>
+
+    <a class="side-link" id="profile-overview-link" href="/user-dashboard">
+      ▦ &nbsp; Overview
+    </a>
+
+    <a class="side-link selected" href="/profile">
+      ♙ &nbsp; My Profile
+    </a>
+
+    <div class="sidebar-bottom">
+      <div class="sidebar-help">
+        Account settings
+        <small>Manage your Nexora details.</small>
+      </div>
+
+      <form action="/logout" method="POST">
+        <button class="side-logout" type="submit">
+          ↪ &nbsp; Sign out
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <main class="dash-main profile-main">
+
+    <header class="dash-top">
+      <div>
+        <span class="eyebrow">ACCOUNT SETTINGS</span>
+        <h1>My profile</h1>
+      </div>
+
+      <div class="profile-top-actions">
+
+        <a class="profile-chip profile-link"
+           id="profile-back-link"
+           href="/user-dashboard"
+           title="Back to overview">
+
+          <span class="avatar" id="profile-avatar">N</span>
+
+          <div>
+            <b id="profile-name-heading">Your profile</b>
+            <small id="profile-role">USER</small>
+          </div>
+
+          <span class="profile-chevron">↗</span>
+        </a>
+
+        <button class="theme-toggle dash-theme"
+                type="button"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+          ☾
+        </button>
+
+      </div>
+    </header>
+
+    <section class="profile-intro">
+
+      <div class="profile-intro-mark">
+        N<span>.</span>
+      </div>
+
+      <div>
+        <span class="eyebrow">NEXORA IDENTITY</span>
+        <h2>Personal information</h2>
+
+        <p>
+          Keep your account details current.
+          Your email and account role are managed by Nexora.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="content-card profile-form-card">
+
+      <div class="card-heading">
+        <div>
+          <span class="eyebrow">PROFILE DETAILS</span>
+          <h2>Account information</h2>
+        </div>
+
+        <span class="status-pill">
+          <i></i> Account active
+        </span>
+      </div>
+
+      <form id="profile-form" class="profile-form" autocomplete="on">
+
+        <div class="profile-fields">
+
+          <label for="profile-name">
+            Full name
+            <input
+              id="profile-name"
+              name="name"
+              type="text"
+              maxlength="120"
+              placeholder="Your full name"
+              required>
+          </label>
+
+          <label for="profile-email">
+            Email address
+            <input
+              id="profile-email"
+              name="email"
+              type="email"
+              readonly
+              aria-readonly="true">
+          </label>
+
+          <label for="profile-mobile">
+            Mobile number
+            <input
+              id="profile-mobile"
+              name="mobile"
+              type="tel"
+              maxlength="30"
+              placeholder="Add your mobile number">
+          </label>
+
+          <label for="profile-college">
+            College / organization
+            <input
+              id="profile-college"
+              name="college"
+              type="text"
+              maxlength="180"
+              placeholder="Add your college or organization">
+          </label>
+
+          <label for="profile-role-input">
+            Account role
+            <input
+              id="profile-role-input"
+              name="role"
+              type="text"
+              readonly
+              aria-readonly="true">
+          </label>
+
+          <label for="profile-created">
+            Member since
+            <input
+              id="profile-created"
+              name="created_at"
+              type="text"
+              readonly
+              aria-readonly="true">
+          </label>
+
+        </div>
+
+        <p id="profile-message"
+           class="profile-message"
+           role="status"
+           aria-live="polite">
+        </p>
+
+        <div class="profile-form-actions">
+
+          <a class="btn btn-outline"
+             id="profile-cancel-link"
+             href="/user-dashboard">
+            Cancel
+          </a>
+
+          <button class="btn" type="submit">
+            Save changes <span>→</span>
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+    <footer class="dash-footer">
+      © <span data-year></span> Nexora
+      <span>Made for a simpler experience.</span>
+    </footer>
+
+  </main>
+
+  <script src="/js/profile.js"></script>
+  <script src="/js/site.js"></script>
+
+</body>
+</html>
